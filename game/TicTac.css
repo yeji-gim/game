@@ -23,7 +23,6 @@ body {
   text-align: center;
   font-size: 6em;
   text-shadow: 4px 4px 6px #FF0000;
-  margin-top: -50px;
 }
 
 .game-info-container {
@@ -53,7 +52,6 @@ table {
   margin-right: auto;
   border-collapse: separate;
   border-spacing: 10px;
-  margin-top: -50px;
 }
 
 td {
