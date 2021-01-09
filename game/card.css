@@ -1,0 +1,194 @@
+  * {
+      box-sizing: border-box;
+  }
+
+html {
+  min-height: 100vh;
+  cursor: url("../Assets/img/blue.cur"), auto;
+}
+body {
+  margin: 0;
+  background : radial-gradient(#152369, #2E4DE8)
+}
+
+.page-title{
+  color : #FCF50A;
+  font-family: 'Bungee Outline', cursive;
+  font-weight: bold;
+  text-align: center;
+  font-size: 6em;
+  text-shadow: 4px 4px 6px #FF0000;
+  margin-top: -50px;
+}
+
+.game-info-container {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+}
+.game-info{
+  color : #F5E74D;
+  font-family: 'Bungee Outline';
+  font-weight: bold;
+  font-size: 3em;
+  text-shadow: 3px 3px 5px #FF0000;
+  margin-top: -100px;
+}
+
+.game-container{
+  display: grid;
+  grid-template-columns: repeat(4,auto);
+  grid-gap: 10px;
+  margin : 50px;
+  justify-content: center;
+  align-items: middle;
+  perspective: 500px;
+}
+
+.card{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 175px;
+  width: 125px;
+
+}
+
+.card:hover{
+  cursor: url("../Assets/img/controller.cur"), auto;
+}
+.card-face{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  backface-visibility: hidden;
+  border: 6px solid blue;
+  transition: transform 400ms ease-in-out;
+
+}
+
+.card.visible .card-back {
+  transform: rotateY(-180deg);
+
+}
+
+.card.visible .card-front{
+  transform: rotateY(0);
+}
+
+
+.card.matched .card-value{
+  animation: dance 1s linear infinite 500ms;
+}
+
+.overlay-text{
+  display: none;
+  position: fixed;
+  top: 0;
+  left : 0;
+  right : 0;
+  bottom : 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: yellow ;
+  font-family: 'Bungee Outline';
+  font-weight: bold;
+  text-shadow: 5px 5px 7px #FF0000;
+}
+.overlay-text-small{
+  font-size: .5em;
+}
+.overlay-text.visible{
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from{
+    background-color: rgba(0,0,0,0);
+    font-size: 0;
+  }
+  to{
+    background-color: rgba(0,0,0,.8);
+    font-size: 10em;
+  }
+
+}
+
+.card.back{
+  background-color: red;
+  border-color: orange;
+}
+
+.card-front {
+  background-color: white;
+  border-color: red green blue yellow;
+  transform: rotateY(180deg);
+}
+
+.card-value {
+  transition: transform 100ms ease-in-out;
+  transform: scale(.6);
+}
+
+.card-front:hover .card-value{
+  transform: scale(.7);
+}
+.foot{
+  position: absolute;
+  width: 45px;
+  height: 47px;
+  transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+
+.card-back:hover .foot{
+  width: 52px;
+  height: 52px;
+}
+.foot-top-left{
+  top: 0;
+  left: 0;
+}
+
+.foot-top-right{
+  top: 0;
+  right: 0;
+}
+
+.foot-bottom-left{
+  bottom: 0;
+  left: 0;
+}
+
+.foot-bottom-right{
+  bottom: 0;
+  right: 0;
+}
+
+.post{
+  align-self: flex-start;
+  transform: translateY(50px);
+  transition: transform 100ms ease-in-out;
+}
+
+.card-back:hover .post {
+  transform: translateY(45px);
+}
+
+@media (max-width: 600px) {
+  .game-container{
+    grid-template-columns: repeat(2,auto);
+  }
+  .game-info-container{
+    flex-direction: column;
+    align-items: center;
+  }
+
+}

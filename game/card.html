@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" href="./card.css">
+      <script src="card.js" async></script>
+      <title>Match</title>
+      <link rel = "icon" href =
+"https://img.icons8.com/officexs/30/4a90e2/cards.png"
+        type = "image/x-icon">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Staatliches&display=swap" rel="stylesheet">
+
+  </head>
+<body>
+      <h1 class = "page-title">Mix-or-Match</h1>
+      <div class="overlay-text visible">
+          Start
+      </div>
+      <div id="game-over text" class="overlay-text">
+          GAME OVER
+          <span class="overlay-text-small">RESTART</span>
+      </div>
+      <div id="victory-text" class="overlay-text">
+          VICTORY
+          <span class="overlay-text-small">RESTART</span>
+      </div>
+      <div class = "game-container">
+        <div class="game-info-container">
+          <div class = "game-info">
+              Time <span id = "time-remaining">100</span>
+            </div>
+            <div class = "game-info">
+              Flips <span id = "flips">0</span>
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/panda.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/panda.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/cow.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/cow.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/dog.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/dog.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/elephant.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/elephant.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/lion.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/lion.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/rabbit.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/rabbit.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/giraffe.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/giraffe.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/koala.png">
+            </div>
+          </div>
+          <div class = "card">
+            <div class = "card-back card-face" >
+              <img class = "post" src="../Assets/img/question.png">
+            </div>
+            <div class = "card-front card-face">
+              <img class = "card-value" src="../Assets/img/koala.png">
+            </div>
+
+
+</body>
